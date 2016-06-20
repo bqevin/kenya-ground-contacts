@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mombasa County Mapping</title>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="mombasa.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/themify-icons.css">
+    <script>
+    // $(document).ready(function() {
+    //     $("button").click(function() {
+    //         $.getJSON("res/mombasa.json", function(result) {
+    //                 $("div").html(result.county_name);
+    //             });
+    //         });
+    // });
+    function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += 'County Name' + arr[i].county_no;
+    }
+    document.getElementById("dis").innerHTML = out;
+}
+myFunction();
+    </script>
+</head>
+
+<body>
+    <div id="dis"></div>
+</body>
+
+</html>
